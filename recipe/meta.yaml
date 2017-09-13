@@ -27,7 +27,7 @@ requirements:
     - six
 
 test:
-  import:
+  imports:
     - libsass
     
 about:
