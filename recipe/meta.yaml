@@ -28,7 +28,7 @@ requirements:
 
 test:
   imports:
-    - libsass
+    - sass
     
 about:
   home: https://github.com/dahlia/libsass-python
