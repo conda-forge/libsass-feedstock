@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [win and py2k]
 
@@ -27,8 +27,8 @@ requirements:
     - six
 
 test:
-  import:
-    - libsass
+  imports:
+    - sass
     
 about:
   home: https://github.com/dahlia/libsass-python
