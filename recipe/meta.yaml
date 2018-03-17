@@ -1,6 +1,6 @@
 {% set name = "libsass" %}
-{% set version = "0.13.2" %}
-{% set sha256 = "f6270e6f5eb0bfa4e5ecf5b9e6443f576a6fe47cbb732b8d6acaf396c323ec0a" %}
+{% set version = "0.14.2" %}
+{% set sha256 = "3ff39d23a56c4ebb3f92e7531521fbf5c00555047c5e0de6aa2a53199e595636" %}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [win and py2k]
 
