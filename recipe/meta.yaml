@@ -7,20 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/sass/{{ name }}-python/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and py2k]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+
+  host:
     - python
-    - setuptools
-    
+    - pip
+    - six
+
   run:
     - python
     - six
@@ -50,3 +54,4 @@ extra:
     - cshaley
     - sannykr
     - isuruf
+    - marcelotrevisani
