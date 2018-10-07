@@ -13,15 +13,18 @@ source:
 
 build:
   number: 1000
-  script: python -m pip install --ignore-installed --no-deps .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: True  # [win and py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+
   host:
     - python
     - pip
+
   run:
     - python
     - six
@@ -51,3 +54,4 @@ extra:
     - cshaley
     - sannykr
     - isuruf
+    - marcelotrevisani
