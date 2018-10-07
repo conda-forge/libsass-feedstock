@@ -7,22 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/sass/libsass-python/archive/{{ version }}.zip
+  url: https://github.com/sass/{{ name }}-python/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
+  #patches:
     # This patch was necessary to avoid to use gcc and g++ directly. Replaced to use CC and CXX.
-    - conda.patch
+    #- conda.patch
 
 build:
   number: 1000
-  script: "{{ PYTHON }} setup.py install --single-version-externally-managed --record record.txt"
+  script: ""{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv""
   skip: True  # [win and py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - git
 
   host:
     - python
