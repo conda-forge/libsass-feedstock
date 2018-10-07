@@ -9,13 +9,10 @@ package:
 source:
   url: https://github.com/sass/{{ name }}-python/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  #patches:
-    # This patch was necessary to avoid to use gcc and g++ directly. Replaced to use CC and CXX.
-    #- conda.patch
 
 build:
   number: 1000
-  script: ""{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv""
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and py2k]
 
 requirements:
