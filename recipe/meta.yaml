@@ -7,8 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/sass/libsass-python/archive/{{ version }}.zip
   sha256: {{ sha256 }}
   patches:
     # This patch was necessary to avoid to use gcc and g++ directly. Replaced to use CC and CXX.
