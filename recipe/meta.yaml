@@ -37,7 +37,7 @@ about:
   home: https://github.com/dahlia/libsass-python
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'    
+  license_file: 'LICENSE'    
   # A pull request has been made to add LICENSE to manifest.in on libsass repo,
   # so after next release on pypi, we can use just "LICENSE" as the license_file
   # This is the link to that PR: https://github.com/dahlia/libsass-python/pull/216
