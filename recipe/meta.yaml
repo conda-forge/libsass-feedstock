@@ -1,6 +1,6 @@
 {% set name = "libsass" %}
-{% set version = "0.15.1" %}
-{% set sha256 = "daa7ea2b3b24585cff907320d071992ffea3ba36c4523f90798f27d1c4a9ef66" %}
+{% set version = "0.16.0" %}
+{% set sha256 = "ee756c684b5524099254d55a17169a81255ed7e03e11c97e9761dc9673c71bad" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and py2k]
 
