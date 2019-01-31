@@ -16,7 +16,7 @@ build:
     - pysassc = pysassc:main
     - sassc = sassc:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
-  skip: True  # [py2k]
+  skip: True  # [win and py2k]
 
 requirements:
   build:
