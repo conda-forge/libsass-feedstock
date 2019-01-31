@@ -11,7 +11,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
+  entry_points:
+    - pysassc = pysassc:main
+    - sassc = sassc:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and py2k]
 
@@ -32,7 +35,10 @@ requirements:
 test:
   imports:
     - sass
-    
+  commands:
+    - sassc --help
+    - pysassc --help
+
 about:
   home: https://github.com/dahlia/libsass-python
   license: MIT
