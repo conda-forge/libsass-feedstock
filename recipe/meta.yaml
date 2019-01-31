@@ -14,7 +14,6 @@ build:
   number: 1001
   entry_points:
     - pysassc = pysassc:main
-    - sassc = sassc:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and py2k]
 
