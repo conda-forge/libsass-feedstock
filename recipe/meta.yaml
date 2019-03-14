@@ -1,6 +1,6 @@
 {% set name = "libsass" %}
-{% set version = "0.17.0" %}
-{% set sha256 = "953ebe810f09d81b84ccafdca0fb6171d1b58c8f0147cb650184a41e124e296f" %}
+{% set version = "0.18.0" %}
+{% set sha256 = "c2f386677514f9fc758631328bd318dd3e9d839ad7b6e248ec4535a191bfd271" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   entry_points:
     - pysassc = pysassc:main
     - sassc = sassc:main
