@@ -1,6 +1,6 @@
 {% set name = "libsass" %}
-{% set version = "0.19.1" %}
-{% set sha256 = "69c86e98fb11ab74356dc054be61ae1ce6882b0dece5be409bb5ba7b1b696885" %}
+{% set version = "0.19.2" %}
+{% set sha256 = "cb50f385117535f7671ac7ff3144c1ef0b8e088778c58d269ce6f31b87bfad72" %}
 
 package:
   name: {{ name|lower }}
