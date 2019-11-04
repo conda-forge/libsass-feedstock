@@ -1,6 +1,5 @@
 {% set name = "libsass" %}
-{% set version = "0.19.3" %}
-{% set sha256 = "b15a0e61bd54764e658bc6931015453fa34d954f87c3b6fd35624e13bcacf69d" %}
+{% set version = "0.19.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +7,14 @@ package:
 
 source:
   url: https://github.com/sass/{{ name }}-python/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 8b5b6d1a7c4ea1d954e0982b04474cc076286493f6af2d0a13c2e950fbe0be95
 
 build:
   number: 0
   entry_points:
     - pysassc = pysassc:main
     - sassc = sassc:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [win and py2k]
 
 requirements:
