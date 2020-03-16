@@ -10,7 +10,7 @@ source:
   sha256: 8b5b6d1a7c4ea1d954e0982b04474cc076286493f6af2d0a13c2e950fbe0be95
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pysassc = pysassc:main
     - sassc = sassc:main
