@@ -239,4 +239,5 @@ Feedstock Maintainers
 * [@isuruf](https://github.com/isuruf/)
 * [@marcelotrevisani](https://github.com/marcelotrevisani/)
 * [@sannykr](https://github.com/sannykr/)
+* [@xhochy](https://github.com/xhochy/)
 
