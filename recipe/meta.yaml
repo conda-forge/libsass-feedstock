@@ -36,7 +36,6 @@ test:
   imports:
     - sass
   commands:
-    - sassc --help
     - pysassc --help
 
 about:
