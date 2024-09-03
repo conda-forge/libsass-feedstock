@@ -28,7 +28,7 @@ requirements:
     - python
     - pip
     - six
-
+    - setuptools
   run:
     - python
     - six
