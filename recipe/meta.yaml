@@ -1,5 +1,5 @@
 {% set name = "libsass" %}
-{% set version = "0.22.0" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,30 +7,32 @@ package:
 
 source:
   url: https://github.com/sass/{{ name }}-python/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ab5ad18e47db560f4f0c09e3d28cf3bb1a44711257488ac2adad69f4f7f8425
+  sha256: d5ba529d9ce668be9380563279f3ffe988f27bc5b299c5a28453df2e0b0fbaf2
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - pysassc = pysassc:main
+    - sassc = sassc:main
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win and py2k]
+  run_exports:
+    - {{ pin_subpackage('libsass', max_pin="x.x") }}
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python 3.9.*                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-
   host:
-    - python
+    - python 3.9.*
     - pip
     - six
     - setuptools
   run:
-    - python
+    - python 3.9.*
     - six
 
 test:
