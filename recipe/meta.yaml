@@ -59,5 +59,3 @@ extra:
     - isuruf
     - marcelotrevisani
     - xhochy
-  additional-platforms:
-    - linux-aarch64
