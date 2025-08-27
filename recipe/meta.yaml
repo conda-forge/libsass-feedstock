@@ -12,7 +12,7 @@ source:
     - 472.patch
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - pysassc = pysassc:main
   script: {{ PYTHON }} -m pip install . -vv
